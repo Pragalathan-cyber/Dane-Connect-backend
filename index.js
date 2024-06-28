@@ -106,7 +106,7 @@ passport.serializeUser((user, done) => {
   }
 });
 
-app.options('/login', cors(corsOptions));
+app.post('/login', cors(corsOptions));
 
 
   app.post('/signup', async (req, res) => {
