@@ -3,7 +3,6 @@ const User = require('../models/User')
 const jwt = require('jsonwebtoken');
 const multer = require('multer');
 const path = require('path')
-const fs = require('fs');
 
 const router = express.Router()
 
