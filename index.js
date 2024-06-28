@@ -19,7 +19,7 @@ const path = require('path')
 mongoose.set('strictQuery', true);
 
 const corsOptions = {
-  origin: ['https://dane-connect.vercel.app'],
+  origin: '*',
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization'],
   credentials: true // Enable credentials (cookies, authorization headers, etc.)
