@@ -23,8 +23,9 @@ app.use(cors({
   origin: 'https://dane-connect.vercel.app',
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization'],
-  credentials: true,
+  credentials: true
 }));
+
 
 // Handle pre-flight requests
 app.options('https://dane-connect.vercel.app', cors());
