@@ -20,14 +20,14 @@ mongoose.set('strictQuery', true);
 
 // Apply CORS middleware
 app.use(cors({
-  origin: '*',
+  origin: 'https://dane-connect.vercel.app',
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization'],
   credentials: true,
 }));
 
 // Handle pre-flight requests
-app.options('*', cors());
+app.options('https://dane-connect.vercel.app', cors());
 
 app.use(express.json());
 app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
