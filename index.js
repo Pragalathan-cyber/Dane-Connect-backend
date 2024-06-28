@@ -18,19 +18,21 @@ const path = require('path')
 
 mongoose.set('strictQuery', true);
 
-app.use(express.json());
-app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
+
 
 app.use(
   cors({
-    origin: '*',
-    methods: ['GET', 'POST', 'PUT', 'DELETE'],
+    origin: 'https://dane-connect.vercel.app',
+    methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
     allowedHeaders: ['Content-Type', 'Authorization'],
     credentials: true,
   })
 );
 
 app.options('*', cors());
+
+app.use(express.json());
+app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 
 passport.use(new LocalStrategy(
     { usernameField: 'email' },
