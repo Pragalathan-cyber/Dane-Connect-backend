@@ -28,7 +28,7 @@ app.use(cors({
 
 
 // Handle pre-flight requests
-app.options('https://dane-connect.vercel.app', cors());
+app.options('*', cors());
 
 app.use(express.json());
 app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
