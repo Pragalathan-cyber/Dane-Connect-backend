@@ -106,9 +106,6 @@ passport.serializeUser((user, done) => {
   }
 });
 
-app.post('/login', cors(corsOptions));
-
-
   app.post('/signup', async (req, res) => {
     const { email, username, password } = req.body;
     try {
