@@ -26,9 +26,11 @@ app.use(
     origin: '*',
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
     allowedHeaders: ['Content-Type', 'Authorization'],
+    credentials: true,
   })
 );
 
+app.options('*', cors());
 
 passport.use(new LocalStrategy(
     { usernameField: 'email' },
